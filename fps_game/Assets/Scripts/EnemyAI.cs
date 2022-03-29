@@ -40,7 +40,7 @@ public class EnemyAI : MonoBehaviour
     {
         //measure distance between enemy n player
         distanceToTarget = Vector3.Distance(target.position, transform.position);
-        if (smellsYou | isProvoked) {
+        if (smellsYou) {
             EngageTarget();
         }
         else if (distanceToTarget <= chaseRange) {
@@ -59,6 +59,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void ChaseTarget(){
+        //GetComponent<Animator>().SetTrigger("run");
         meshA.SetDestination(target.position);
     }
 
