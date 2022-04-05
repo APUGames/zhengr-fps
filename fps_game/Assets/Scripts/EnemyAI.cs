@@ -59,13 +59,15 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void ChaseTarget(){
-        //GetComponent<Animator>().SetTrigger("run");
+        GetComponent<Animator>().SetBool("attack", false);
+        GetComponent<Animator>().SetTrigger("run");
         meshA.SetDestination(target.position);
     }
 
     private void AttackTarget(){
         //temp
-        print(name + " has slain " + target.name);
+        GetComponent<Animator>().SetBool("attack", true);
+        //print(name + " has slain " + target.name);
     }
     
     private void OnDrawGizmosSelected() {
