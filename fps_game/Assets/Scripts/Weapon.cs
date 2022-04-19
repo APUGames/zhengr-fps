@@ -13,20 +13,21 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessRaycast();
+        if(Input.GetMouseButtonDown(0)){
+            Shoot();
+        }
     }
 
     private void Shoot()
     {
-        // TODO:
-        // Hit effect for visual feedback
-        // Call a method on EnemyHealth that decreases enemy's health
+        ProcessRaycast();
+        PlayMuzzleFlash();
     }
 
-    /*private void CreateHitImpact(RaycastCommand hit){
-        GameObject impact = Instantiate(hitEffect, hit.point, Quarternion.LookRotation(hit.normal));
+    private void CreateHitImpact(RaycastHit hit){
+        GameObject impact = Instantiate(hitEffect.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
         Destroy(impact, 0.1f);
-    }*/
+    }
 
     private void ProcessRaycast(){
         RaycastHit hit;

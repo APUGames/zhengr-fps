@@ -1,14 +1,16 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] float hitPoints = 100f;
-    [SerializeField] float damage = 30f;
 
     public void TakeDamage(float damage)
     {
+        GetComponent<EnemyAI>().OnDamageTaken();
+        BroadcastMessage("OnDamageTaken");
+
         hitPoints -= damage;
 
         if (hitPoints <= damage)
@@ -16,4 +18,5 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }
