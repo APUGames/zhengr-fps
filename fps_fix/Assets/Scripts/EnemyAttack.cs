@@ -19,6 +19,7 @@ public class EnemyAttack : MonoBehaviour
             return;
         }
         print("player has been hit.");
+        target.GetComponent<DisplayDamage>().ShowDamageImpact();
         target.GetComponent<PlayerHealthScript>().TakeDamage(damage);
     }
 

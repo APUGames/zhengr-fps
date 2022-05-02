@@ -9,19 +9,33 @@ public class Weapon : MonoBehaviour
     [SerializeField] float damage = 30f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffect;
+    //[SerializeField] Ammo ammoSlot;
+    [SerializeField] float reloadTime = 0.5f;
+    [SerializeField] AmmoType ammoType;
+    bool canShoot = true;
 
     // Update is called once per frame
     void Update()
+
     {
-        if(Input.GetMouseButtonDown(0)){
-            Shoot();
+        if(Input.GetMouseButtonDown(0) && canShoot){
+            StartCoroutine(Shoot());
         }
     }
+    private void OnEnable(){
+        canShoot = true;
+    }
 
-    private void Shoot()
+    IEnumerator Shoot()
     {
-        ProcessRaycast();
-        PlayMuzzleFlash();
+        canShoot = false;
+        //if(ammoSlot.GetCurrentAmmo() > 0 ){
+            ProcessRaycast();
+            PlayMuzzleFlash();
+            //ammoSlot.ReduceCurrentAmmo();
+        //}
+        yield return new WaitForSeconds(reloadTime);
+        canShoot = true;
     }
 
     private void CreateHitImpact(RaycastHit hit){
