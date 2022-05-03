@@ -1763,6 +1763,58 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 408763508}
+    - target: {fileID: 1923532169, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_Range
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532169, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5036935
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532169, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5870678
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532169, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532169, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_Intensity
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532169, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532170, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532170, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.7600001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532170, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99819005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532170, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.06013916
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532170, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000005960465
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532170, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000009313227
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923532170, guid: d894efd5125d84343b80c306dd72605d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -6.896
+      objectReference: {fileID: 0}
     - target: {fileID: 1977361440, guid: d894efd5125d84343b80c306dd72605d, type: 3}
       propertyPath: gameOverUI
       value: 
@@ -1915,7 +1967,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4c6a431e04fd1c04a8a5735b26cad4f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
