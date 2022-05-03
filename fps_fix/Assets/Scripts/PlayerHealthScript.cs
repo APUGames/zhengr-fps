@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerHealthScript : MonoBehaviour
 {
 
-    [SerializeField] float hitPoints = 100f;
+    [SerializeField] public float hitPoints = 100f;
     // Start is called before the first frame update
     public void TakeDamage(float damage)
     {
