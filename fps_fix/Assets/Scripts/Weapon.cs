@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] Ammo ammoSlot;
     [SerializeField] float reloadTime = 0.5f;
     [SerializeField] AmmoType ammoType;
-    [SerializeField] TextMeshProUGUI ammoText;
+    //[SerializeField] TextMeshProUGUI ammoText;
 
     bool canShoot = true;
 
@@ -21,16 +21,16 @@ public class Weapon : MonoBehaviour
     void Update()
 
     {
-        DisplayAmmo();
+        //DisplayAmmo();
         if(Input.GetMouseButtonDown(0) && canShoot){
             StartCoroutine(Shoot());
         }
     }
 
-    public void DisplayAmmo(){
-        int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
-        ammoText.text = currentAmmo.ToString();
-    }
+    //public void DisplayAmmo(){
+        //int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
+        //ammoText.text = currentAmmo.ToString();
+   // }
     private void OnEnable()
     {
         canShoot = true;

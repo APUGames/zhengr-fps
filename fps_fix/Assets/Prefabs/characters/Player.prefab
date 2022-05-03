@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c730955cdfccdca4a896684c68ce2df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightDecay: 2
+  lightDecay: 1
   angleDecay: 0
   minimumAngle: 0
 --- !u!65 &5752807269821836531
@@ -243,8 +243,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.23086008, y: 1.1732898, z: 3.6671715}
-  m_Center: {x: -0.005941007, y: 0.20827223, z: -0.582928}
+  m_Size: {x: 0.24528544, y: 0.7838796, z: 1.4149119}
+  m_Center: {x: -0.0059301015, y: 0.50917757, z: -0.86547095}
 --- !u!114 &52156705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,13 +259,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fPCamera: {fileID: 6666531258440467279}
   range: 500
-  damage: 500
+  damage: 80
   muzzleFlash: {fileID: 6593655385390227190}
   hitEffect: {fileID: 0}
   ammoSlot: {fileID: 705810523}
-  reloadTime: 3
+  reloadTime: 1.5
   ammoType: 1
-  ammoText: {fileID: 0}
 --- !u!65 &7440190916073211415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -299,7 +298,6 @@ MonoBehaviour:
   ammoSlot: {fileID: 705810523}
   reloadTime: 0.1
   ammoType: 0
-  ammoText: {fileID: 0}
 --- !u!1 &6666531257249471838
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +309,7 @@ GameObject:
   - component: {fileID: 6666531257249471837}
   - component: {fileID: 2782264954242541866}
   - component: {fileID: 1267429510}
+  - component: {fileID: 2023101120}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -365,6 +364,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: 0
+--- !u!114 &2023101120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666531257249471838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f5820ec50215947a6e59cf3339fd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoText: {fileID: 0}
+  ammoText2: {fileID: 0}
+  ammoSlot: {fileID: 705810523}
+  ammoType: 0
+  ammoType2: 1
 --- !u!1 &6666531258442367337
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +508,7 @@ MonoBehaviour:
     YSensitivity: 2
     clampVerticalRotation: 1
     MinimumX: -100
-    MaximumX: 25
+    MaximumX: 55
     smooth: 1
     smoothTime: 18
     lockCursor: 1
