@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Weapon : MonoBehaviour
 {
@@ -9,31 +10,41 @@ public class Weapon : MonoBehaviour
     [SerializeField] float damage = 30f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffect;
-    //[SerializeField] Ammo ammoSlot;
+    [SerializeField] Ammo ammoSlot;
     [SerializeField] float reloadTime = 0.5f;
     [SerializeField] AmmoType ammoType;
+    [SerializeField] TextMeshProUGUI ammoText;
+
     bool canShoot = true;
 
     // Update is called once per frame
     void Update()
 
     {
+        DisplayAmmo();
         if(Input.GetMouseButtonDown(0) && canShoot){
             StartCoroutine(Shoot());
         }
     }
-    private void OnEnable(){
+
+    private void DisplayAmmo(){
+        int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
+        ammoText.text = currentAmmo.ToString();
+    }
+    private void OnEnable()
+    {
         canShoot = true;
     }
 
     IEnumerator Shoot()
     {
         canShoot = false;
-        //if(ammoSlot.GetCurrentAmmo() > 0 ){
+        if(ammoSlot.GetCurrentAmmo(ammoType) > 0 )
+        {
             ProcessRaycast();
             PlayMuzzleFlash();
-            //ammoSlot.ReduceCurrentAmmo();
-        //}
+            ammoSlot.ReduceCurrentAmmo(ammoType);
+        }
         yield return new WaitForSeconds(reloadTime);
         canShoot = true;
     }
