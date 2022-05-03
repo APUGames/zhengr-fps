@@ -27,7 +27,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void DisplayAmmo(){
+    public void DisplayAmmo(){
         int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
         ammoText.text = currentAmmo.ToString();
     }

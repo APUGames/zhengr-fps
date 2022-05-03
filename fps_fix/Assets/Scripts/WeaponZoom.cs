@@ -21,6 +21,8 @@ public class WeaponZoom : MonoBehaviour
 
     private void Update()
     {
+        GetComponent<Weapon>().DisplayAmmo();
+
         if (Input.GetMouseButtonDown(1))
         {
             if (zoomedInToggle == false)

@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 1923532169}
   - component: {fileID: 1640719}
   - component: {fileID: 1640722}
+  - component: {fileID: 1640723}
   m_Layer: 0
   m_Name: flashlight
   m_TagString: Untagged
@@ -119,13 +120,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923532168}
-  m_LocalRotation: {x: -0.117376685, y: -0, z: -0, w: 0.9930875}
-  m_LocalPosition: {x: -0.74, y: 0.27, z: 0.76}
+  m_LocalRotation: {x: -0.06013916, y: 0.00000005960465, z: -0.000000009313227, w: 0.99819005}
+  m_LocalPosition: {x: -0.52, y: 0.193, z: 0.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6666531258442014031}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -13.481, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -6.896, y: 0, z: 0}
 --- !u!108 &1923532169
 Light:
   m_ObjectHideFlags: 0
@@ -137,11 +138,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0, b: 0.061771393, a: 1}
-  m_Intensity: 40
-  m_Range: 1000
+  m_Color: {r: 0.7264151, g: 0.5870678, b: 0.5036935, a: 1}
+  m_Intensity: 25
+  m_Range: 2000
   m_SpotAngle: 75
-  m_InnerSpotAngle: 2
+  m_InnerSpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -195,7 +196,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923532168}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5026069d2dabbc246961f156d0b68aa3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -216,6 +217,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 0
+--- !u!114 &1640723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923532168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c730955cdfccdca4a896684c68ce2df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightDecay: 2
+  angleDecay: 0
+  minimumAngle: 0
 --- !u!65 &5752807269821836531
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -223,12 +239,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148025023590}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5026069d2dabbc246961f156d0b68aa3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.23086008, y: 1.1732898, z: 4.8959174}
-  m_Center: {x: -0.005947289, y: 0.20827577, z: 0.031446222}
+  m_Size: {x: 0.23086008, y: 1.1732898, z: 3.6671715}
+  m_Center: {x: -0.005941007, y: 0.20827223, z: -0.582928}
 --- !u!114 &52156705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,12 +258,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fPCamera: {fileID: 6666531258440467279}
-  range: 100
+  range: 500
   damage: 500
   muzzleFlash: {fileID: 6593655385390227190}
   hitEffect: {fileID: 0}
   ammoSlot: {fileID: 705810523}
-  reloadTime: 5
+  reloadTime: 3
   ammoType: 1
   ammoText: {fileID: 0}
 --- !u!65 &7440190916073211415
@@ -257,7 +273,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148884836136}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5026069d2dabbc246961f156d0b68aa3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -277,11 +293,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fPCamera: {fileID: 6666531258440467279}
   range: 100
-  damage: 30
+  damage: 25
   muzzleFlash: {fileID: 2077842209}
   hitEffect: {fileID: 0}
   ammoSlot: {fileID: 705810523}
-  reloadTime: 0.5
+  reloadTime: 0.1
   ammoType: 0
   ammoText: {fileID: 0}
 --- !u!1 &6666531257249471838
@@ -367,7 +383,7 @@ GameObject:
   - component: {fileID: 3295145430083803513}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -475,8 +491,8 @@ MonoBehaviour:
     XSensitivity: 2
     YSensitivity: 2
     clampVerticalRotation: 1
-    MinimumX: -45
-    MaximumX: 90
+    MinimumX: -100
+    MaximumX: 25
     smooth: 1
     smoothTime: 18
     lockCursor: 1
@@ -901,14 +917,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df3ce82db8e66645afd54ab1d5b0262, type: 3}
---- !u!1 &919132148884836136 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4df3ce82db8e66645afd54ab1d5b0262, type: 3}
-  m_PrefabInstance: {fileID: 937505401}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &543450652804404626 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4df3ce82db8e66645afd54ab1d5b0262, type: 3}
+  m_PrefabInstance: {fileID: 937505401}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &919132148884836136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4df3ce82db8e66645afd54ab1d5b0262, type: 3}
   m_PrefabInstance: {fileID: 937505401}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1151426871
