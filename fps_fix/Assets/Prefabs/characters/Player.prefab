@@ -296,7 +296,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 2077842209}
   hitEffect: {fileID: 0}
   ammoSlot: {fileID: 705810523}
-  reloadTime: 0.1
+  reloadTime: 0.2
   ammoType: 0
 --- !u!1 &6666531257249471838
 GameObject:
