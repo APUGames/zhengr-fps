@@ -56,8 +56,9 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void ChaseTarget(){
-        GetComponent<Animator>().SetBool("attack", false);
         GetComponent<Animator>().SetTrigger("run");
+        GetComponent<Animator>().SetBool("attack", false);
+        print("running");
         meshA.SetDestination(target.position);
     }
 
