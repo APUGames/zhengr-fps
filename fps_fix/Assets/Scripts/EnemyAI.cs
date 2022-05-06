@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5.0f;
     [SerializeField] float turnSpeed = 5.0f;
-    [SerializeField] AudioClip meowAudio;
+    
     
     NavMeshAgent meshA;
 
@@ -64,10 +64,12 @@ public class EnemyAI : MonoBehaviour
         meshA.SetDestination(target.position);
     }
 
-    private void AttackTarget(){
+    private /*async*/ void AttackTarget(){
         //temp
-        AudioSource meow = GetComponent<AudioSource>();
-        meow.PlayOneShot(meowAudio, 0.7f);
+        bool catMeow = false;
+        if (catMeow == false){
+            
+        }
         GetComponent<Animator>().SetBool("attack", true);
         //print(name + " has slain " + target.name);
     }

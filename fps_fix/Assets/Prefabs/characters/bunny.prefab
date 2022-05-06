@@ -99,10 +99,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
+  m_Radius: 0.5
+  m_Height: 0.53
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.31, z: 0}
 --- !u!195 &682360683926158704
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -140,7 +140,6 @@ MonoBehaviour:
   target: {fileID: 0}
   chaseRange: 20
   turnSpeed: 5
-  meowAudio: {fileID: 0}
 --- !u!95 &6470737767416915221
 Animator:
   serializedVersion: 3
@@ -187,6 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   damage: 10
+  meowAudio: {fileID: 0}
 --- !u!1001 &74853748
 PrefabInstance:
   m_ObjectHideFlags: 0

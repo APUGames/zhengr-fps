@@ -113,8 +113,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 682360683926158711}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.51
-  m_Speed: 3.5
+  m_Radius: 2
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -122,7 +122,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 3.24
+  m_Height: 4
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -140,8 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   chaseRange: 10
-  turnSpeed: 5
-  meowAudio: {fileID: 8300000, guid: fd2b7327684d32d46b303f95ded01820, type: 3}
+  turnSpeed: 50
 --- !u!95 &6470737767416915221
 Animator:
   serializedVersion: 3
@@ -188,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   damage: 40
+  meowAudio: {fileID: 8300000, guid: fd2b7327684d32d46b303f95ded01820, type: 3}
 --- !u!82 &1272513645
 AudioSource:
   m_ObjectHideFlags: 0

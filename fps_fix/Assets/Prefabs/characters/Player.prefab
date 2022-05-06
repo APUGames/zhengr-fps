@@ -354,12 +354,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fPCamera: {fileID: 6666531258440467279}
-  range: 500
-  damage: 80
+  range: 5000
+  damage: 180
   muzzleFlash: {fileID: 6593655385390227190}
   hitEffect: {fileID: 4959821710908689641}
   ammoSlot: {fileID: 705810523}
-  reloadTime: 1.5
+  reloadTime: 1
   ammoType: 1
   gunShot: {fileID: 8300000, guid: 72e411de354f6a44da0efadb0085a77a, type: 3}
 --- !u!65 &7440190916073211415
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fPCamera: {fileID: 6666531258440467279}
-  range: 100
+  range: 200
   damage: 25
   muzzleFlash: {fileID: 2077842209}
   hitEffect: {fileID: 4959821710052763254}
@@ -1694,17 +1694,57 @@ PrefabInstance:
       value: -38.264
       objectReference: {fileID: 0}
     - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
+      propertyPath: lengthInSec
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
+      propertyPath: ShapeModule.m_Rotation.x
+      value: 34.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
+      propertyPath: ShapeModule.m_Rotation.y
+      value: 86.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
+      propertyPath: ShapeModule.m_Rotation.z
+      value: -32.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.33962262
+      value: 0.745283
       objectReference: {fileID: 0}
     - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.062477753
+      value: 0.745283
       objectReference: {fileID: 0}
     - target: {fileID: 6593655384736415747, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.07957782
+      value: 0.745283
       objectReference: {fileID: 0}
+    - target: {fileID: 6593655384736415756, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b6a5bfa65bbb9a4587a2e8c283cf977, type: 2}
     - target: {fileID: 6593655384736415757, guid: 3350f60f99c37f24489a046d920251d8, type: 3}
       propertyPath: m_Name
       value: muzzle flash

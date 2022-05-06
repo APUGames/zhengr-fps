@@ -7,6 +7,7 @@ public class EnemyAttack : MonoBehaviour
     PlayerHealthScript Target;
     [SerializeField] Transform target;
     [SerializeField] float damage = 40f;
+    [SerializeField] AudioClip meowAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,8 @@ public class EnemyAttack : MonoBehaviour
             return;
         }
         print("player has been hit.");
+        AudioSource meow = GetComponent<AudioSource>();
+        meow.PlayOneShot(meowAudio, 0.5f);
         target.GetComponent<DisplayDamage>().ShowDamageImpact();
         target.GetComponent<PlayerHealthScript>().TakeDamage(damage);
     }
