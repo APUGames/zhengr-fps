@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d413dc464d8d66419e850fea08c38d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 10
+  ammoAmount: 20
   ammoType: 0
 --- !u!136 &914566316
 CapsuleCollider:

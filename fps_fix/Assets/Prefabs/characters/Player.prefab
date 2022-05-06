@@ -489,7 +489,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 2077842209}
   hitEffect: {fileID: 4959821710052763254}
   ammoSlot: {fileID: 705810523}
-  reloadTime: 0.2
+  reloadTime: 0.1
   ammoType: 0
   gunShot: {fileID: 8300000, guid: 9e0cccef41154554e8860feeac436f5a, type: 3}
 --- !u!1 &6666531257249471838
@@ -593,6 +593,7 @@ GameObject:
   - component: {fileID: 3295145430083803513}
   - component: {fileID: 1817017434}
   - component: {fileID: 1817017435}
+  - component: {fileID: 1846668242}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -726,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a16a014d7acd8488ae43750d036637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 200
+  hitPoints: 100
 --- !u!114 &1977361440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,6 +880,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4230ff38d236341947a28b0933c755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1846668242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666531258442367337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06155143c224534cbafe43497587fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
 --- !u!1 &6666531258442367339
 GameObject:
   m_ObjectHideFlags: 0
