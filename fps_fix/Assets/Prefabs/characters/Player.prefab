@@ -355,11 +355,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fPCamera: {fileID: 6666531258440467279}
   range: 5000
-  damage: 180
+  damage: 100
   muzzleFlash: {fileID: 6593655385390227190}
   hitEffect: {fileID: 4959821710908689641}
   ammoSlot: {fileID: 705810523}
-  reloadTime: 1
+  reloadTime: 0.5
   ammoType: 1
   gunShot: {fileID: 8300000, guid: 72e411de354f6a44da0efadb0085a77a, type: 3}
 --- !u!65 &7440190916073211415
@@ -489,7 +489,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 2077842209}
   hitEffect: {fileID: 4959821710052763254}
   ammoSlot: {fileID: 705810523}
-  reloadTime: 0.1
+  reloadTime: 0.05
   ammoType: 0
   gunShot: {fileID: 8300000, guid: 9e0cccef41154554e8860feeac436f5a, type: 3}
 --- !u!1 &6666531257249471838
